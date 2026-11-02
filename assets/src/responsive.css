@@ -16,8 +16,8 @@
 @media only screen and (max-width: 640px) and (orientation: portrait) {
     .popup.active {
         transform: translate(-50%, -50%) scale(1) rotate(90deg);
-        width: 95vh;
-        height: 95vw;
+        width: 95svh;
+        height: 95svw;
     }
 
     .large-image {
@@ -32,88 +32,21 @@
 
 /* === SM (max-width: 640px) — biasanya untuk HP kecil === */
 @media (max-width: 640px) {
-    /* CSS untuk sm */
-    .logo-nav {
-        margin-top: 48%;
-    }
-    .maskot-nav {
-        margin-top: 50%;
-    }
-    .logo-container {
-        padding: 1rem;
-    }
 }
 
 /* === MD (min-width: 641px) dan (max-width: 768px) — HP besar / tablet kecil === */
 @media (min-width: 641px) and (max-width: 768px) {
-    /* CSS untuk md */
-    .logo-nav, .maskot-nav {
-        margin-top: 32%;
-    }
 }
 
 /* === LG (min-width: 769px) dan (max-width: 1024px) — tablet besar / laptop kecil === */
 @media (min-width: 769px) and (max-width: 1024px) {
-    /* CSS untuk lg */
-    .logo-container {
-        padding: 4rem;
-    }
-    .maskot-container {
-        padding: 3rem;
-    }
 }
 
 /* === XL (min-width: 1025px) — laptop besar / desktop === */
 @media (min-width: 1025px) {
-  /* CSS untuk xl */
 }
 
 @media (max-width: 768px){
-    /*==================== WISH SECTION ====================*/
-    .wish-container {
-        padding: 1rem;
-    }
-
-    .wish-nav {
-        position: absolute;
-        flex-direction: row;
-        justify-content: center;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-top: 30%;
-    }
-    .logo-nav ,.maskot-nav {
-        position: absolute;
-        flex-direction: row;
-        justify-content: center;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .wish-nav button, .logo-nav button, .maskot-nav button {
-        width: 28px;
-        height: 28px;
-        font-size: 1rem;
-        border: 3px solid rgba(11, 223, 219);
-    }
-    .wish-dots, .logo-dots, .maskot-dots {
-        flex-direction: row;
-        gap: 5px;
-    }
-
-    .wish-dot, .logo-dot, .maskot-dot {
-        width: 6px;
-        height: 6px;
-    }
-    #wish-prev i::before, #logo-prev i::before, #maskot-prev i::before {
-        content: "\f060"; 
-    }
-    #wish-next i::before, #logo-next i::before, #maskot-next i::before {
-        content: "\f061";
-    }
-    
-    /*==================== WISH SECTION ====================*/
-
-    /*==================== FAQ SECTION ====================*/
     .slide img {
         box-shadow: 0px 0px 3px 1px rgba(0, 122, 255);
     }
@@ -126,43 +59,4 @@
         transform: translateZ(4px);
         transition: all 0.8s;
     }
-    /*==================== FAQ SECTION ====================*/
-    
-    /*==================== FAQ SECTION ====================*/
-    .faq-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-        .faq-section {
-        height: 830px;
-        padding: 0 0.5em;
-    }
-
-    .faq-section .text-h2 {
-        font-size: 11vw;
-        letter-spacing: normal;
-    }
-
-    .faq-section .text-p {
-        font-size: 1rem;
-        max-width: 90%;
-    }
-    .faq-section .button-with-icon {
-        margin-bottom: 3rem;
-    }
-    .faq-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-    /* .container-accordion {
-        margin: -20px 0 0 0;
-        width: 100%;
-    } */
-
-    .container-accordion li label i {
-        font-size: 1.2rem;
-        width: 25px;
-        height: 25px;
-    }
 }
-/* ### FAQ SECTION */
