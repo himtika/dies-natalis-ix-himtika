@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ### NAVBAR
 // Navbar Fixed
-window.onscroll = function () {
+function updateNavbar() {
   const header = document.querySelector("#navbar");
   const fixedNav = header.offsetTop;
   console.log(fixedNav);
@@ -71,7 +71,10 @@ window.onscroll = function () {
     header.style.transform = "translateY(0)";
     header.style.opacity = "1";
   }
-};
+}
+
+window.addEventListener("scroll", updateNavbar);
+updateNavbar();
 
 // Hamburger
 const hamburger = document.querySelector("#hamburger");
