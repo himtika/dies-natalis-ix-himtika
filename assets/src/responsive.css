@@ -1,10 +1,10 @@
 /* ### HERO SECTION */
 /* Button Get Started */
 @media (max-width: 768px){
-    .button .sparkle {
+    .button-hero .sparkle {
         width: 1.5rem;
     }
-    .button .text_button {
+    .button-hero .text_button {
         font-size: 12px;
         font-weight: 500;
     }

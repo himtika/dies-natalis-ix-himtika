@@ -25,17 +25,6 @@ document.querySelectorAll("img").forEach((img) => {
   img.addEventListener("contextmenu", (event) => event.preventDefault());
 });
 
-// HERO SECTION
-document.addEventListener("DOMContentLoaded", function () {
-  let getStartedBtn = document.querySelector(".button");
-  let aboutSection = document.getElementById("about");
-
-  // Ketika tombol Get Started diklik, scroll ke bagian About
-  getStartedBtn.addEventListener("click", function () {
-    aboutSection.scrollIntoView({ behavior: "smooth" });
-  });
-});
-
 // ### NAVBAR
 // Navbar Fixed
 function updateNavbar() {
@@ -158,7 +147,52 @@ window.addEventListener("click", function (event) {
     }, 300);
   }
 });
+
+// ### NAVBAR SMOOTH SCROLL
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll('#nav-menu a[href^="#"]');
+
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+
+      if (!targetSection) return;
+
+      event.preventDefault();
+
+      targetSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
+      // Tutup menu navbar pada tampilan mobile
+      if (window.innerWidth < 1024) {
+        const navMenu = document.getElementById("nav-menu");
+        const hamburger = document.getElementById("hamburger");
+
+        document.body.classList.remove("nav-open");
+        navMenu.classList.remove("dropdown-appear");
+        navMenu.classList.add("hidden");
+
+        hamburger.classList.remove("hamburger-active");
+      }
+    });
+  });
+});
 // ### NAVBAR
+
+// HERO SECTION
+document.addEventListener("DOMContentLoaded", function () {
+  let getStartedBtn = document.querySelector(".button");
+  let aboutSection = document.getElementById("about");
+
+  // Ketika tombol Get Started diklik, scroll ke bagian About
+  getStartedBtn.addEventListener("click", function () {
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+  });
+});
+// HERO SECTION
 
 // WHY WE DIVE — Mobile Card Interaction
 function initPurposeCards() {

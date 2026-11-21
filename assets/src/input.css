@@ -1036,7 +1036,7 @@ a {
 /* Button BackToHIMTIKA */
 
 /* Button Get Started */
-.button {
+.button-hero {
   --border_radius: 9999px;
   --transtion: 0.3s ease-in-out;
   --offset: 2px;
@@ -1049,7 +1049,7 @@ a {
   -o-border-radius: var(--border_radius);
 }
 
-.button::before {
+.button-hero::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1072,7 +1072,7 @@ a {
   z-index: 0;
 }
 
-.button::after {
+.button-hero::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1092,14 +1092,14 @@ a {
   z-index: 2;
 }
 
-.button:is(:hover, :focus-visible) {
+.button-hero:is(:hover, :focus-visible) {
   --active: 1;
 }
-.button:active {
+.button-hero:active {
   transform: scale(1);
 }
 
-.button .dots_border {
+.button-hero .dots_border {
   --size_border: calc(100% + 2px);
   overflow: hidden;
   position: absolute;
@@ -1113,7 +1113,7 @@ a {
   z-index: -10;
 }
 
-.button .dots_border::before {
+.button-hero .dots_border::before {
   content: "";
   position: absolute;
   top: 30%;
@@ -1134,14 +1134,14 @@ a {
   }
 }
 
-.button .arrow-down {
+.button-hero .arrow-down {
   position: relative;
   z-index: 10;
   color: white;
   flex-shrink: 0;
 }
 
-.button:hover .arrow-down {
+.button-hero:hover .arrow-down {
   animation: arrowBounce 1.5s ease-in-out infinite;
 }
 
@@ -1155,7 +1155,7 @@ a {
   }
 }
 
-.button .text_button {
+.button-hero .text_button {
   position: relative;
   z-index: 10;
   background: white;
@@ -1543,6 +1543,61 @@ a {
 }
 /* ### GALLERY SECTION */
 
+/* START OCEAN AUDIO — SPEAKER CONTROL */
+.ocean-sound-toggle {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 9999;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(5, 33, 57, 0.8);
+    border: 1.5px solid #49D8FF;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(73, 216, 255, 0.2);
+    backdrop-filter: blur(8px);
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+.ocean-sound-toggle:hover {
+    background: rgba(10, 73, 105, 0.95);
+    border-color: #ffffff;
+    box-shadow: 0 0 18px rgba(73, 216, 255, 0.5);
+    transform: translateY(-3px);
+}
+.ocean-sound-toggle:active {
+    transform: scale(0.94);
+}
+.ocean-sound-toggle svg {
+    width: 23px;
+    height: 23px;
+}
+.ocean-sound-toggle:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+@media (max-width: 639px) {
+    .ocean-sound-toggle {
+        bottom: 18px;
+        left: 16px;
+        width: 44px;
+        height: 44px;
+    }
+    .ocean-sound-toggle svg {
+        width: 21px;
+        height: 21px;
+    }
+}
+/* END OCEAN AUDIO — SPEAKER CONTROL */
+
 /* START FOOTER */
 .site-footer {
   position: relative;
@@ -1551,25 +1606,20 @@ a {
   color: white;
   background: transparent;
 }
-
 .footer-container {
   max-width: 1440px;
   margin: 0 auto;
 }
-
 .footer-main-row {
   display: flex;
   flex-direction: column;
   margin-top: 16px;
 }
-
 /* BRAND COLUMN */
 .footer-brand-col {
   margin-top: 20px;
   margin-bottom: 32px;
 }
-
-
 .brand-content {
     width: 100%;
     display: flex;
